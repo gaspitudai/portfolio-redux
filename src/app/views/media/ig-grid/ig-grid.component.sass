@@ -1,0 +1,18 @@
+@import '../../../../breakpoints'
+
+.ig-feed-section
+    width: 100vw
+    height: 100vh
+    background: #222
+    display: flex
+    justify-content: center
+    .feed-container
+        width: 100%
+        height: auto
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        height: fit-content
+
+@media only screen and (min-width: $break-800)
+    .feed-container
+        max-width: $break-800

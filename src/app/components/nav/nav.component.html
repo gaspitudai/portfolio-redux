@@ -1,0 +1,20 @@
+<nav>
+    <div class="nav-content">
+
+        <ng-container *ngFor="let btn of buttons">
+            
+            <div class="btn-container">
+                <button
+                    (click)="goToSection(btn.name);">
+                    {{btn.name}}
+                </button>
+                <div
+                    class="dot"
+                    [ngClass]="{'active': btn.active}">
+                </div>
+            </div>
+            
+        </ng-container>
+        
+    </div>
+</nav>

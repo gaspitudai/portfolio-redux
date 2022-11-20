@@ -1,0 +1,15 @@
+<section class="ig-feed-section">
+
+    <div class="feed-container">
+        
+        <ng-container *ngFor="let img of images">
+
+            <app-img-feed-preview
+                [img]="img">
+            </app-img-feed-preview>
+            
+        </ng-container>
+    
+    </div>
+
+</section>
