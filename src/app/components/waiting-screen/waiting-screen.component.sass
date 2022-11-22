@@ -1,0 +1,22 @@
+.waiting-screen
+    position: absolute
+    background: rgba(0, 0, 0, 1)
+    width: 100%
+    height: 100vh
+    z-index: 22
+    position: fixed
+    display: flex
+    justify-content: center
+    align-items: center
+
+.dots
+    width: 40px
+    aspect-ratio: 1.154
+    --_g: no-repeat radial-gradient(farthest-side,#aed4ff 90%,#0098df36)
+    background: var(--_g) 50%  0, var(--_g) 0    100%, var(--_g) 100% 100%
+    background-size: 35% calc(35%*1.154)
+    animation: d6 1s infinite
+
+@keyframes d6
+    50%,100%
+        background-position: 100% 100%,50% 0,0 100%

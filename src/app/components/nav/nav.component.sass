@@ -1,12 +1,17 @@
-@import ../../../colors
+@import ../../../scss/breakpoints
+@import ../../../scss/colors
 
 nav
-    width: 100%
+    width: 30%
+    right: 0
+    border-bottom-left-radius: 100px
+    border-top-left-radius: 100px
+    background: green
     height: 50px
-    border-bottom: 1px solid rgba(255, 255, 255, .3)
     display: flex
     justify-content: center
     position: fixed
+    margin-top: 2em
 
     .nav-content
         width: 40%
@@ -23,7 +28,7 @@ nav
             button
                 background: none
                 border: none
-                color: rgba(255, 255, 255, .3)
+                color: #EEE
             button:hover
                 color: $green-1
                 cursor: pointer
@@ -34,3 +39,11 @@ nav
 
 .active
     background: $green-1
+
+@media only screen and (max-width: $break-800)
+    nav
+        width: 100%
+        right: 0
+        left: 0
+        border-radius: 100px
+        margin: 2em

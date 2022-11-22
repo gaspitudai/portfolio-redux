@@ -1,24 +1,104 @@
+@import ../../../scss/fonts
+@import ../../../scss/breakpoints
+
 main
-    width: 100vw
     height: 100vh
-    .avatar-container
+    z-index: 0
+    app-background
         width: 100%
         height: 100%
-        position: fixed
+        position: absolute
+    header
+        width: 100%
+        height: 100%
         display: flex
-        justify-content: center
-        align-items: center
-        .avatar-center
-            width: 66vw
-            height: 66vw
-            display: inline-block
+        .avatar-section
+            width: 30%
+            height: 100%
+            background: rgba(0, 0, 0, .5)
+            position: fixed
+            padding-top: 5em
+            .avatar-container
+                // width: 300px
+                // height: 300px
+                border-radius: 100%
+                right: 0
+                position: absolute
+                margin-right: -150px
+                .avatar-center
+                    width: 300px
+                    height: 300px
+                    display: inline-block
+                    position: relative
+                    overflow: hidden
+                    border-radius: 50%
+                    margin-top: 0
+                    position: relative
+                    .img-avatar-1
+                        height: 100%
+                        width: auto
+                        margin-left: -6em
+                        position: absolute
+                    .img-avatar-2
+                        height: 100%
+                        width: auto
+                        margin-left: -6em
+                        z-index: -1
+        .dashboard-section
+            width: 100%
+            height: 100%
             position: relative
-            overflow: hidden
-            border-radius: 50%
-            img
-                height: 100%
-                width: auto
-                margin-left: -6em
+            .bottom-dashboard-section
+                position: absolute
+                width: 64%
+                height: 42%
+                right: 0
+                bottom: 0
+                // background: rgba(255, 0, 0, .3)
+                .title-box
+                    width: fit-content
+                    // background: #140ce64d
+                    display: flex
+                    flex-direction: column
+                    text-align: right
+                    .h-title
+                        font-size: 142px
+                        font-family: nevrada
+                        line-height: 160px
+                        color: #eee
+                    .h-subtitle
+                        font-size: 33px
+                        font-family: futura2
+                        line-height: 0px
+                        color: #eee
 
 #app-ig-grid
     z-index: 1
+    position: relative
+
+@media only screen and (max-width: $break-800)
+    main
+        header
+            .avatar-section
+                width: 50%
+                .avatar-container
+                    margin-right: -125px
+                    .avatar-center
+                        width: 250px
+                        height: 250px
+            .dashboard-section
+                .bottom-dashboard-section
+                    width: 100%
+                    height: 45%
+                    display: flex
+                    justify-content: center
+                    .title-box
+                        text-align: left
+                        width: 100%
+                        padding-left: 2em
+                        .h-title
+                            font-size: 76px
+                            line-height: inherit
+                        .h-subtitle
+                            font-size: 18px
+                            margin-top: 1em

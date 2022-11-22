@@ -1,12 +1,37 @@
-<main #mainContent>
+<main #mainContent (scroll)="onScroll($event)">
 
-    <app-nav></app-nav>
+    <app-background></app-background>
 
-    <!-- <div class="avatar-container">
-        <div class="avatar-center">
-            <img src="../../../assets/img/1.jpg" alt="avatar">
-        </div>
-    </div> -->
+    <!-- <app-nav></app-nav> -->
+
+    <header>
+        <section class="avatar-section">
+            <div #avatarContainer class="avatar-container">
+                <div #avatarCenter class="avatar-center">
+                    <img class="img-avatar-1" #imgAvatar1 src="../../../assets/img/2.jpg">
+                    <img class="img-avatar-2" #imgAvatar2 src="../../../assets/img/1.jpg">
+                </div>
+            </div>
+        </section>
+        <section #dashboardSection class="dashboard-section">
+            <div class="bottom-dashboard-section">
+                <div class="title-box">
+                    <span
+                        (mouseenter)="changeBgColor(true)" 
+                        (mouseleave)="changeBgColor()" 
+                        class="h-title">
+                        Gaspi.<br class="d-n">Lara
+                    </span>
+                    <span
+                        (mouseenter)="changeBgColor(true)" 
+                        (mouseleave)="changeBgColor()" 
+                        class="h-subtitle">
+                        Digital Creator
+                    </span>
+                    </div>
+            </div>
+        </section>
+    </header>
 
 </main>
 

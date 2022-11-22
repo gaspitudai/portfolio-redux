@@ -1,5 +1,5 @@
 import ImageFeed from 'src/app/models/image-feed.model';
-import * as fromImageViewReducer from '../actions/image.actions';
+import * as fromImageViewActions from '../actions/image.actions';
 
 export interface State {
     imageView: ImageFeed
@@ -8,23 +8,27 @@ export interface State {
 const initialState: State = {
     imageView: {
         src: null,
+        show: false,
+        // src: 'https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?cs=srgb&dl=pexels-pixabay-60597.jpg&fm=jpg',
+        // show: true
     },
 };
 
 export function imageViewReducer(
     state = initialState,
-    action: fromImageViewReducer.All
+    action: fromImageViewActions.All
 ): State {
     let payload = action.payload;
     switch (action.type) {
-        case fromImageViewReducer.SET_IMG_URL: {
+        case fromImageViewActions.SET_IMG_URL: {
             return {
                 imageView: {
                     src: payload.src,
+                    show: false,
                 }
             }
         }
-        case fromImageViewReducer.SHOW_IMG: {
+        case fromImageViewActions.SHOW_IMG: {
             return {
                 imageView: {
                     src: payload.src,
@@ -32,10 +36,11 @@ export function imageViewReducer(
                 }
             }
         }
-        case fromImageViewReducer.HIDE_IMG: {
+        case fromImageViewActions.HIDE_IMG: {
             return {
                 imageView: {
                     src: null,
+                    show: false,
                 }
             }
         }

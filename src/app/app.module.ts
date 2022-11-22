@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
@@ -11,6 +10,7 @@ import { ImgFeedPreviewComponent } from './views/media/ig-grid/img-feed-preview/
 import { ImageViewerComponent } from './components/image-viewer/image-viewer.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './store/reducers/app-state.reducer';
+import { WaitingScreenComponent } from './components/waiting-screen/waiting-screen.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { reducers } from './store/reducers/app-state.reducer';
     BackgroundComponent,
     IgGridComponent,
     ImgFeedPreviewComponent,
-    ImageViewerComponent
+    ImageViewerComponent,
+    WaitingScreenComponent,
   ],
   imports: [
     BrowserModule,
